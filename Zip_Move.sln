@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zip_Move", "Zip_Move.csproj", "{080737C5-8E2C-464B-A9A0-5B59D0C8DB93}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{080737C5-8E2C-464B-A9A0-5B59D0C8DB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080737C5-8E2C-464B-A9A0-5B59D0C8DB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080737C5-8E2C-464B-A9A0-5B59D0C8DB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080737C5-8E2C-464B-A9A0-5B59D0C8DB93}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {276127F7-6927-48CD-92FE-193DCC4CE5F9}
+	EndGlobalSection
+EndGlobal
