@@ -28,14 +28,32 @@ namespace Zip_Move
 
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            string pathFileName = textBoxInput.Text + ".zip";
-            ZipFile.CreateFromDirectory(textBoxInput.Text, pathFileName, CompressionLevel.Optimal, false);
-            File.Move(pathFileName, textBoxOutput.Text + pathFileName.Substring(textBoxInput.Text.LastIndexOf("\\")));
+            string inputPath = textBoxInput.Text + ".zip";
+            string outputPath = textBoxOutput.Text + inputPath.Substring(textBoxInput.Text.LastIndexOf("\\"));
+            string[] files = Directory.GetFiles(textBoxOutput.Text);
+            foreach (string file in files)
+            {
+                if (file == outputPath)
+                {
+                    File.Delete(outputPath);
+                }
+            }
+            try
+            {
+                ZipFile.CreateFromDirectory(textBoxInput.Text, inputPath, CompressionLevel.Optimal, false);
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("Input/Output folder no longer exist(s)! Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
+            }
+            File.Move(inputPath, outputPath);
         }
 
         private void checkEmptyBox()
         {
-            if (textBoxInput.Text != "Click here to select file/folder" && textBoxOutput.Text != "Click here to select folder") {
+            if (textBoxInput.Text != "Click here to select file/folder" && textBoxOutput.Text != "Click here to select folder")
+            {
                 buttonStart.Enabled = true;
             }
         }
